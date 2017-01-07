@@ -1,0 +1,39 @@
+﻿<SOUI name="mainWindow" title="@string/title" bigIcon="ICON_LOGO:32" smallIcon="ICON_LOGO:16" width="600" height="400"  margin="20,5,5,5"  resizable="1" wndType="appMain"
+appWnd="1"
+translucent="1" 
+>
+  <root skin="skin_bkgnd" cache="1">
+    <caption pos="0,0,-0,30" show="1" font="adding:0">
+      <icon pos="10,8" src="ICON_LOGO:16"/>
+      <text pos="29,9">我的音乐播放器-by WangYing</text>
+      <imgbtn name="btn_close" skin="_skin.sys.btn.close"    pos="-45,0" tip="close" animate="1"/>
+      <imgbtn name="btn_max" skin="_skin.sys.btn.maximize"  pos="-83,0" animate="1" />
+      <imgbtn name="btn_restore" skin="_skin.sys.btn.restore"  pos="-83,0" show="0" animate="1" />
+      <imgbtn name="btn_min" skin="_skin.sys.btn.minimize" pos="-121,0" animate="1" />
+    </caption>
+    <window pos="5,[2,-5,-5">
+      <!--左侧按钮区-->
+      <button pos="50,30,@90,@30" offset="-0.5,-0.5" name="button_open_file" font="adding:-2">打开</button>
+      <button pos="50,[20,@90,@30" offset="-0.5,-0.5" name="button_play_music" font="adding:-2">播放</button>
+      <button pos="50,[20,@90,@30" offset="-0.5,-0.5" name="button_pause_music" font="adding:-2">暂停</button>
+      <!--音量条-->
+      <text pos="5,[20" font="adding:-2">调节音量</text>
+      <sliderbar name="slider_play_volume" thumbInRail="0" pos="0,[20,@120,@20" alpha="255" value="0" min="0" max="100" />
+       <!--播放状况-->
+      <text pos="5,[20" font="adding:-2" name="text_play_time">播放中时间：X分X秒</text>
+      <text pos="5,[20" font="adding:-2" name="text_total_time">音频总时间：X分X秒</text>
+      <!--右侧列表区-->
+      <window pos="[60,17,@400,@275" colorBkgnd="#E6E6E6" alpha="150">
+        <listview pos="5,5,-5,-5" name="lv_music_fix" dividerSize="5" wantTab="1">
+            <template itemHeight="30" colorHover="#cccccc" colorSelected="#D3E2F8" trackMouseEvent="1">
+              <text pos="5,|" name="text_file_path" font="adding:-2">filepath</text>
+            </template>
+          </listview>
+      </window>
+      <!--下侧滚动条区-->
+      <window pos="0,[15,-0,-15">
+        <sliderbar name="slider_play_time" thumbInRail="0" pos="10,|,-10,@20" alpha="255" value="0" min="0" max="255" />
+      </window>
+    </window>
+      </root>
+</SOUI>
