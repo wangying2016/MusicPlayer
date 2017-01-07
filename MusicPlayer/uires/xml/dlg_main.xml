@@ -13,9 +13,9 @@ translucent="1"
     </caption>
     <window pos="5,[2,-5,-5">
       <!--左侧按钮区-->
-      <button pos="50,30,@90,@30" offset="-0.5,-0.5" name="button_open_file" font="adding:-2">打开</button>
-      <button pos="50,[20,@90,@30" offset="-0.5,-0.5" name="button_play_music" font="adding:-2">播放</button>
-      <button pos="50,[20,@90,@30" offset="-0.5,-0.5" name="button_pause_music" font="adding:-2">暂停</button>
+      <button pos="50,30,@90,@30" offset="-0.5,-0.5" name="button_open_file" font="adding:-2" focusable="0">打开</button>
+      <button pos="50,[20,@90,@30" offset="-0.5,-0.5" name="button_play_music" font="adding:-2" focusable="0">播放</button>
+      <button pos="50,[20,@90,@30" offset="-0.5,-0.5" name="button_pause_music" font="adding:-2" focusable="0">暂停</button>
       <!--音量条-->
       <text pos="5,[20" font="adding:-2">调节音量</text>
       <sliderbar name="slider_play_volume" thumbInRail="0" pos="0,[20,@120,@20" alpha="255" value="0" min="0" max="100" />
