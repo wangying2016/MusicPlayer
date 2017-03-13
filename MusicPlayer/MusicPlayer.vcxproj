@@ -113,10 +113,20 @@
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>curllib.lib;curllib_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\workspace\MusicPlayer\libcurl\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\workspace\MusicPlayer\libcurl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HttpGetResouce.cpp" />
     <ClCompile Include="MainDlg.cpp" />
     <ClCompile Include="MusicPlayer.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -128,6 +138,7 @@
     <ResourceCompile Include="MusicPlayer.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HttpGetResouce.h" />
     <ClInclude Include="libzplay.h" />
     <ClInclude Include="MainDlg.h" />
     <ClInclude Include="resource.h" />
